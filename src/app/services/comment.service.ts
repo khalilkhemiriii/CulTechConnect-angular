@@ -12,7 +12,7 @@ import {Observable} from 'rxjs/index';
 })
 export class CommentService {
 
-  commentsURL = 'http://localhost:8080/comments';
+  commentsURL = 'http://localhost:8083/comments';
 
   constructor(private http: HttpClient) {
   }
@@ -45,18 +45,18 @@ export class CommentService {
     return this.http.get<Comment[]>(this.commentsURL + '/touristAttraction/' + id);
   }
 
-  getCommentsRatingForHotel(id: number){
-    return this.http.get<any>(this.commentsURL + '/hotel/statistics/' +id);
+  getCommentsRatingForHotel(id: number) {
+    return this.http.get<any>(this.commentsURL + '/hotel/statistics/' + id);
   }
-  getCommentsRatingForRestaurant(id: number){
-    return this.http.get<any>(this.commentsURL + '/restaurant/statistics/' +id);
+  getCommentsRatingForRestaurant(id: number) {
+    return this.http.get<any>(this.commentsURL + '/restaurant/statistics/' + id);
   }
-  getCommentsRatingForTouristAttraction(id: number){
-    return this.http.get<any>(this.commentsURL + '/touristAttraction/statistics/' +id);
+  getCommentsRatingForTouristAttraction(id: number) {
+    return this.http.get<any>(this.commentsURL + '/touristAttraction/statistics/' + id);
   }
 
-  deleteComment(id:number){
-    return this.http.delete<any>(this.commentsURL + '/remove/' +id);
+  deleteComment(id: number) {
+    return this.http.delete<any>(this.commentsURL + '/remove/' + id);
   }
  /* getCommentsRatingForHotel(id: number){
     return this.http.get<[]>(this.commentsURL + '/touristAttraction/' + id);

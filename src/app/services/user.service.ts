@@ -13,8 +13,8 @@ const httpOptions = {
 })
 export class UserService {
 
-  usersURL = 'http://localhost:8080/user';
-  API_URL = 'http://localhost:8080/api/test/';
+  usersURL = 'http://localhost:8083/user';
+  API_URL = 'http://localhost:8083/api/test/';
 
 
   constructor(private http: HttpClient) {
@@ -45,7 +45,7 @@ export class UserService {
   }
 
   deleteImageById(id: number){
-    return this.http.delete('http://localhost:8080/city/images/remove/'+id);
+    return this.http.delete('http://localhost:8083/city/images/remove/'+id);
   }
 
   deleteUser(id:number){

@@ -165,7 +165,7 @@ export class EditUserComponent implements OnInit {
       uploadData.append('myFile', selectedimg, selectedimg.name);
       console.log(selectedimg.name);
 
-      this.httpClient.post('http://localhost:8080/user/upload/' + this.id, uploadData)
+      this.httpClient.post('http://localhost:8083/user/upload/' + this.id, uploadData)
         .subscribe(
           res => {
             console.log(res);

@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 import {stringify} from 'querystring';
 import {Observable} from 'rxjs/index';
 import {TouristAttraction} from '../model/touristAttraction';
-import {Image} from "../model/image";
+import {Image} from '../model/image';
 
 @Injectable({
 
@@ -13,7 +13,7 @@ import {Image} from "../model/image";
 })
 export class TouristAttractionService {
 
-  touristAttractionsURL = 'http://localhost:8080/touristAttraction';
+  touristAttractionsURL = 'http://localhost:8083/touristAttraction';
 
   constructor(private http: HttpClient) {
   }
@@ -41,8 +41,8 @@ export class TouristAttractionService {
     return this.http.get<Image[]>(this.touristAttractionsURL + '/images/all/' + id);
   }
 
-  deleteTouristAttraction(id:number){
-    return this.http.delete<any>(this.touristAttractionsURL + '/remove/' +id);
+  deleteTouristAttraction(id: number) {
+    return this.http.delete<any>(this.touristAttractionsURL + '/remove/' + id);
   }
 
   // login

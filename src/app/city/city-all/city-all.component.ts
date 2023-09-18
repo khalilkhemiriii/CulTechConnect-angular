@@ -403,7 +403,7 @@ export class CityAllComponent implements OnInit {
       uploadData.append('myFile', selectedimg, selectedimg.name);
       console.log(selectedimg.name);
 
-      this.httpClient.post('http://localhost:8080/city/upload/' + this.id, uploadData)
+      this.httpClient.post('http://localhost:8083/city/upload/' + this.id, uploadData)
         .subscribe(
           res => {
             console.log(res);

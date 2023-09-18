@@ -124,7 +124,7 @@ export class EditRestaurantComponent implements OnInit  {
       uploadData.append('myFile', selectedimg, selectedimg.name);
       console.log(selectedimg.name);
 
-      this.httpClient.post('http://localhost:8080/restaurant/upload/' + this.restaurant.id, uploadData)
+      this.httpClient.post('http://localhost:8083/restaurant/upload/' + this.restaurant.id, uploadData)
         .subscribe(
           res => {
             console.log(res);

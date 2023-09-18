@@ -41,15 +41,15 @@ import {AddCommentComponent} from './comment/comment-add/comment-add.component';
 import {EditCommentComponent} from './comment/comment-edit/comment-edit.component';
 import {OrderByPipe} from './services/order-by.pipe';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {EventPageComponent} from "./event/event-page/event-page.component";
-import {RestaurantPageComponent} from "./restaurant/restaurant-page/restaurant-page.component";
-import {TouristAttractionPageComponent} from "./touristAttraction/touristAttraction-page/touristAttraction-page.component";
-import {ToastrModule} from "ngx-toastr";
-import {EditReservationComponent} from './reservation/reservation-edit/reservation-edit.component'
-import {AddReservationComponent} from './reservation/reservation-add/reservation-add.component'
-import {Role} from "./model/role";
-import {UserProfileComponent} from "./user/user-profile/user-profile.component";
-import {EditUserProfileComponent} from "./user/edit-user-profile/edit-user-profile.component";
+import {EventPageComponent} from './event/event-page/event-page.component';
+import {RestaurantPageComponent} from './restaurant/restaurant-page/restaurant-page.component';
+import {TouristAttractionPageComponent} from './touristAttraction/touristAttraction-page/touristAttraction-page.component';
+import {ToastrModule} from 'ngx-toastr';
+import {EditReservationComponent} from './reservation/reservation-edit/reservation-edit.component';
+import {AddReservationComponent} from './reservation/reservation-add/reservation-add.component';
+import {Role} from './model/role';
+import {UserProfileComponent} from './user/user-profile/user-profile.component';
+import {EditUserProfileComponent} from './user/edit-user-profile/edit-user-profile.component';
 
 
 
@@ -116,9 +116,9 @@ import {EditUserProfileComponent} from "./user/edit-user-profile/edit-user-profi
       {
         path: 'users',
         component: UsersComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole]
+          roles: [Role.AdminRole]
         }
       },
 
@@ -129,46 +129,46 @@ import {EditUserProfileComponent} from "./user/edit-user-profile/edit-user-profi
       {
         path: 'city/:id',
         component: CityAllComponent
-        //canActivate:[AuthGaurdService]
+        // canActivate:[AuthGaurdService]
       },
       {
         path: 'cities/insert',
         component: AddCityComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
      {
       path: 'cities/edit/:id',
       component: EditCityComponent,
-       canActivate:[AuthGaurdService],
+       canActivate: [AuthGaurdService],
        data: {
-         roles:[Role.AdminRole,Role.ModRole]
+         roles: [Role.AdminRole, Role.ModRole]
        }
       },
       {
         path: 'user/:id',
         component: UserDetailsComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole]
+          roles: [Role.AdminRole]
         }
       },
       {
         path: 'profile',
         component: UserProfileComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.UserRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.UserRole, Role.ModRole]
         }
       },
       {
         path: 'profile/editprofile',
         component: EditUserProfileComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.UserRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.UserRole, Role.ModRole]
         }
       },
       {
@@ -204,33 +204,33 @@ import {EditUserProfileComponent} from "./user/edit-user-profile/edit-user-profi
       {
         path: 'hotels/add/:id',
         component: AddHotelComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'hotels/edit/:id',
         component: EditHotelComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'map-home',
         component: MapHomeComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'edit/:id',
         component: EditUserComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole]
+          roles: [Role.AdminRole]
         }
       },
       {
@@ -240,17 +240,17 @@ import {EditUserProfileComponent} from "./user/edit-user-profile/edit-user-profi
       {
         path: 'event/insert/:id',
         component: AddEventComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'event/edit/:id',
         component: EditEventComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
@@ -261,9 +261,9 @@ import {EditUserProfileComponent} from "./user/edit-user-profile/edit-user-profi
       {
         path: 'restaurant/insert/:id',
         component: AddRestaurantComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
@@ -274,76 +274,76 @@ import {EditUserProfileComponent} from "./user/edit-user-profile/edit-user-profi
       {
         path: 'restaurant/edit/:id',
         component: EditRestaurantComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'touristAttraction-page/add/:id',
         component: AddTouristAttractionComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'touristAttraction-page/edit/:id',
         component: EditTouristAttractionComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'typeoffood/add',
         component: AddTypeOfFoodComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'typeoffood/edit',
         component: EditTypeOfFoodComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole]
+          roles: [Role.AdminRole, Role.ModRole]
         }
       },
       {
         path: 'comment/add/:id',
         component: AddCommentComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole,Role.UserRole]
+          roles: [Role.AdminRole, Role.ModRole, Role.UserRole]
         }
 
       },
       {
         path: 'comment/edit',
         component: EditCommentComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole,Role.UserRole]
+          roles: [Role.AdminRole, Role.ModRole, Role.UserRole]
         }
       },
       {
         path: 'reservation/add/:id',
         component: AddReservationComponent,
-        //canActivate:[AuthGaurdService],
-        canActivate:[AuthGaurdService],
+        // canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole,Role.UserRole]
+          roles: [Role.AdminRole, Role.ModRole, Role.UserRole]
         }
 
       },
       {
         path: 'reservation/edit/:id',
         component: EditReservationComponent,
-        canActivate:[AuthGaurdService],
+        canActivate: [AuthGaurdService],
         data: {
-          roles:[Role.AdminRole,Role.ModRole,Role.UserRole]
+          roles: [Role.AdminRole, Role.ModRole, Role.UserRole]
         }
       },
 

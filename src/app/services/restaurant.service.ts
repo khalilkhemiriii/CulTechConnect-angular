@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Restaurant} from '../model/restaurant';
 import {stringify} from 'querystring';
 import {Observable} from 'rxjs/index';
-import {Image} from "../model/image";
+import {Image} from '../model/image';
 
 @Injectable({
 
@@ -12,7 +12,7 @@ import {Image} from "../model/image";
 })
 export class RestaurantService {
 
-  restaurantsURL = 'http://localhost:8080/restaurant';
+  restaurantsURL = 'http://localhost:8083/restaurant';
 
   constructor(private http: HttpClient) {
   }
@@ -39,8 +39,8 @@ export class RestaurantService {
     return this.http.get<Image[]>(this.restaurantsURL + '/images/all/' + id);
   }
 
-  deleteRestaurant(id:number){
-    return this.http.delete<any>(this.restaurantsURL + '/remove/' +id);
+  deleteRestaurant(id: number) {
+    return this.http.delete<any>(this.restaurantsURL + '/remove/' + id);
   }
 
   // login

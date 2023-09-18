@@ -5,14 +5,14 @@ import {City} from '../model/city';
 import {User} from '../model/user';
 import {stringify} from 'querystring';
 import {Observable} from 'rxjs/index';
-import {Image} from "../model/image";
+import {Image} from '../model/image';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CityService {
 
-  cityURL = 'http://localhost:8080/city';
+  cityURL = 'http://localhost:8083/city';
 
   constructor(private http: HttpClient) {
   }
@@ -38,8 +38,8 @@ export class CityService {
   getAllCityImagesById(id: number) {
     return this.http.get<Image[]>(this.cityURL + '/images/all/' + id);
   }
-  deleteCity(id:number){
-    return this.http.delete<any>(this.cityURL + '/remove/' +id);
+  deleteCity(id: number) {
+    return this.http.delete<any>(this.cityURL + '/remove/' + id);
   }
 
 }

@@ -13,7 +13,7 @@ import {UsersEvents} from "../model/usersEvents";
 })
 export class EventService {
 
-  eventsURL = 'http://localhost:8080/event';
+  eventsURL = 'http://localhost:8083/event';
 
   constructor(private http: HttpClient) {
   }

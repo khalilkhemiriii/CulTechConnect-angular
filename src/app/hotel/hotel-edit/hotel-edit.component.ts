@@ -123,7 +123,7 @@ export class EditHotelComponent implements OnInit  {
       uploadData.append('myFile', selectedimg, selectedimg.name);
       console.log(selectedimg.name);
 
-      this.httpClient.post('http://localhost:8080/hotel/upload/' + this.hotel.id, uploadData)
+      this.httpClient.post('http://localhost:8083/hotel/upload/' + this.hotel.id, uploadData)
         .subscribe(
           res => {
             console.log(res);

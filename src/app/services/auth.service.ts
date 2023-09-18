@@ -4,7 +4,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {TokenStorageService} from "./token-storage.service";
 import {User} from "../model/user";
 
-const AUTH_API = 'http://localhost:8080/user/';
+const AUTH_API = 'http://localhost:8083/user/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

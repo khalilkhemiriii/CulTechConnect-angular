@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 // import {User} from '../model/user';
 import {stringify} from 'querystring';
 import {Observable} from 'rxjs/index';
-import {TypeOfFood} from "../model/typeOfFood";
+import {TypeOfFood} from '../model/typeOfFood';
 
 @Injectable({
 
@@ -11,7 +11,7 @@ import {TypeOfFood} from "../model/typeOfFood";
 })
 export class TypeOfFoodService {
 
-  typeOfFoodURL = 'http://localhost:8080/typeoffood';
+  typeOfFoodURL = 'http://localhost:8083/typeoffood';
 
   constructor(private http: HttpClient) {
   }
@@ -35,8 +35,8 @@ export class TypeOfFoodService {
     return this.http.get<TypeOfFood[]>(this.typeOfFoodURL + '/restaurant/' + id);
   }
 
-  deleteTypeOfFood(id:number){
-    return this.http.delete<any>(this.typeOfFoodURL + '/remove/' +id);
+  deleteTypeOfFood(id: number) {
+    return this.http.delete<any>(this.typeOfFoodURL + '/remove/' + id);
   }
   // login
   /* loginUser(username: string) {
