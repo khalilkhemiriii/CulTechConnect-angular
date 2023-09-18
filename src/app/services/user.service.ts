@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {User} from '../model/user';
-import {stringify} from 'querystring';
 import {Observable} from 'rxjs/index';
 import {Image} from "../model/image";
 
@@ -33,7 +32,7 @@ export class UserService {
 
   // register
   insertUser(user) {
-    return this.http.post<User>(this.usersURL + '/insert', user);
+    return this.http.post<User>(this.usersURL + '/signup', user);
   }
 
   getUserImageById(id: number) {
@@ -78,7 +77,9 @@ this.http.post<Observable<boolean>>(this.usersURL + '', {
       'token',
       btoa(user.username + ':' + user.password)
     );
+// print msg
 
+    console.log('User ' + user.username + ' logged in successfully.');
     /*this.router.navigate(['']);*/
   } else {
     alert('Authentication failed.');

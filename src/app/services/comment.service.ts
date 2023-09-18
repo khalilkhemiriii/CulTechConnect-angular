@@ -3,7 +3,6 @@ import {HttpClient} from '@angular/common/http';
 // import {User} from '../model/user';
 import {Hotel} from '../model/hotel';
 import {Comment} from '../model/comment';
-import {stringify} from 'querystring';
 import {Observable} from 'rxjs/index';
 
 @Injectable({

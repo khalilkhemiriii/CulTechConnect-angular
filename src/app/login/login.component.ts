@@ -11,7 +11,6 @@ import {ToastrService} from "ngx-toastr";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form: any = {};
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
@@ -19,8 +18,13 @@ export class LoginComponent implements OnInit {
   //destinationUrl = '/map-home';
 
   isPassword = true;
+  form: any = {  // This is where you initialize the form object
+    username: '',
+    password: ''
+  }
 
-  constructor(private router: Router, private authService: AuthService, private tokenStorage: TokenStorageService, private toastr:ToastrService) { }
+
+    constructor(private router: Router, private authService: AuthService, private tokenStorage: TokenStorageService, private toastr:ToastrService) { }
 
   ngOnInit() {
     if (this.tokenStorage.getToken()) {

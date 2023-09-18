@@ -3,7 +3,6 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {City} from '../model/city';
 import {User} from '../model/user';
-import {stringify} from 'querystring';
 import {Observable} from 'rxjs/index';
 import {Image} from '../model/image';
 

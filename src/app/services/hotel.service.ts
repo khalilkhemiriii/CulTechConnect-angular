@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 // import {User} from '../model/user';
 import {Hotel} from '../model/hotel';
-import {stringify} from 'querystring';
 import {Observable} from 'rxjs/index';
 import {Image} from '../model/image';
 
